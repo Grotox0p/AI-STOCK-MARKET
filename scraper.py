@@ -1,6 +1,6 @@
-#!/usr/bin/env python3
+
 """
-scraper.py
+
 
 Fetches the current Nifty 50 constituents and writes them to nifty50_today.csv.
 
@@ -185,4 +185,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
