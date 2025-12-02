@@ -10,16 +10,16 @@ NIFTY_CSV = "nifty50_today.csv"
 
 def read_symbols():
     df = pd.read_csv(NIFTY_CSV)
-    if "symbol" not in df.columns:
-        print("nifty50.csv missing 'symbol' column")
+    if "Symbol" not in df.columns:
+        print("nifty50.csv missing 'Symbol' Column")
         sys.exit(1)
-    symbols = df['symbol'].astype(str).tolist()
-    return symbols, df.set_index('symbol')['company'].to_dict()
+    symbols = df['Symbol'].astype(str).tolist()
+    return symbols, df.set_index('Symbol')['Company Name'].to_dict()
 
 def fetch_symbol_data(ticker, company_name=None):
     """
     Fetch today's 1m intraday history via yfinance.
-    Returns dict: {'symbol':..., 'company':..., 'open':..., 'current':..., 'pct':..., 'volume':...}
+    Returns dict: {'Symbol':..., 'Company':..., 'open':..., 'current':..., 'pct':..., 'volume':...}
     """
     # Normalize to Yahoo ticker for NSE
     if not ticker.endswith(".NS"):
