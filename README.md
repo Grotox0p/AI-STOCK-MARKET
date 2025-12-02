@@ -26,3 +26,6 @@ Volume (latest 1-minute candle)
 Prints:
 Top 5 Gainers
 Top 5 Losers
+
+MY Output
+<img width="850" height="372" alt="Screenshot 2025-12-02 162410" src="https://github.com/user-attachments/assets/0e57af78-904e-4e01-9b0c-b8821ffea3ef" />
